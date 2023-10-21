@@ -3,7 +3,7 @@ import React from 'react';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 import ButtonVariant from '../../components/Buttons/ButtonVariant';
 
-export default function Onboarding() {
+export default function Onboarding({navigation}) {
   return (
     <View style={styles.container}>
       <Image
@@ -11,7 +11,10 @@ export default function Onboarding() {
         style={styles.icon}
       />
       <Text style={styles.title}>Are you a trainer or champ ?</Text>
-      <ButtonPrimary text={'Trainer'} />
+      <ButtonPrimary
+        onPress={() => navigation.navigate('Trainer')}
+        text={'Trainer'}
+      />
       <ButtonVariant text={'Champ'} />
     </View>
   );
