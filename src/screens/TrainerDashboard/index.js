@@ -4,7 +4,7 @@ import React from 'react';
 export default function TrainerDashboard() {
   return (
     <View>
-      <Text>Dashboard</Text>
+      <Text>TrainerDashboard</Text>
     </View>
   );
 }
