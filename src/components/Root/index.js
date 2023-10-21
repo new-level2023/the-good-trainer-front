@@ -1,9 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+
 
 // import 'react-native-gesture-handler';
 import React from 'react';
@@ -27,6 +22,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import Signin from '../../screens/Signin';
 import Home from '../../screens/Home';
 import Onboarding from '../../screens/Onboarding';
+import Trainer from '../../screens/Trainer';
+
 
 // import RNCitizenPrinterModule from '../../printers.js/RNCitizenPrinterModule';
 // import RNBrotherPrinterModule from '../../printers.js/RNBrotherPrinterModule';
@@ -51,6 +48,7 @@ const Root = () => {
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="Trainer" component={Trainer} />
       </Stack.Navigator>
     </NavigationContainer>
   );
