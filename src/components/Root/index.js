@@ -23,7 +23,7 @@ import {NavigationContainer} from '@react-navigation/native';
 // import KioskSearch from '../../screens/KioskSearch';
 // import KioskUnlock from '../../screens/KioskUnlock';
 
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import Signin from '../../screens/Signin';
 import Home from '../../screens/Home';
 import Onboarding from '../../screens/Onboarding';
@@ -40,8 +40,6 @@ const Root = () => {
   //     };
   //     initPrinters();
   //   }, []);
-
-  console.log("dasdassssddd");
 
   return (
     <NavigationContainer>

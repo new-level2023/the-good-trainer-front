@@ -10,7 +10,6 @@ import 'react-native-gesture-handler';
 import React from 'react';
 
 // import SplashScreen from 'react-native-splash-screen'; // For Splash Screen
-import {NativeBaseProvider} from 'native-base';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 // import {RaHColors} from './src/utils/RahColors';
 // import {Toast} from 'react-native-toast-message/lib/src/Toast';
@@ -43,9 +42,7 @@ function App(): JSX.Element {
 
       {/* <Provider>
           <PersistGate loading={null} persistor={persistor}> */}
-      <NativeBaseProvider>
-        <Root />
-      </NativeBaseProvider>
+      <Root />
       {/* </PersistGate>
         </Provider> */}
 
