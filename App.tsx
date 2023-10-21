@@ -7,9 +7,9 @@
  */
 
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useEffect} from 'react';
 
-// import SplashScreen from 'react-native-splash-screen'; // For Splash Screen
+import SplashScreen from 'react-native-splash-screen'; // For Splash Screen
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 // import {RaHColors} from './src/utils/RahColors';
 // import {Toast} from 'react-native-toast-message/lib/src/Toast';
@@ -32,9 +32,9 @@ import Root from './src/components/Root';
 function App(): JSX.Element {
   // const queryClient = new QueryClient();
 
-  // useEffect(() => {
-  //   SplashScreen.hide();
-  // }, []);
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaProvider style={{backgroundColor: '#000'}}>
