@@ -23,10 +23,8 @@ const styles = StyleSheet.create({
   text: {
     color: '#FFFF',
     textAlign: 'center',
-    fontFamily: 'Mulish',
+    fontFamily: 'Satoshi-Bold',
     fontSize: 18,
-    fontStyle: 'normal',
-    fontWeight: 'bold',
   },
   buttonPress: {
     justifyContent: 'center',

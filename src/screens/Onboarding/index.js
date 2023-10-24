@@ -4,7 +4,11 @@ import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 import ButtonVariant from '../../components/Buttons/ButtonVariant';
 import ButtonGradient from '../../components/Buttons/ButtonGradient';
 
-export default function Onboarding() {
+export default function Onboarding({navigation}) {
+  const onPress = () => {
+    navigation.navigate('TrainerDashboard');
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -13,7 +17,7 @@ export default function Onboarding() {
       />
       <Text style={styles.title}>Are you a trainer or champ ?</Text>
       <ButtonPrimary text={'Trainer'} />
-      <ButtonVariant text={'Champ'} />
+      <ButtonVariant text={'Champ'} onPress={onPress} />
       {/* <ButtonGradient text={'Continue'} /> */}
     </View>
   );
