@@ -33,7 +33,7 @@ export default function Home({navigation}) {
           </Text>
           <ButtonSecundary onPress={onPress} text={'Get started'} />
           <Text style={styles.textLight}>
-            Already have account?
+            Already have account?{' '}
             <Pressable>
               <Text style={styles.colorPrimary}>Log In</Text>
             </Pressable>
@@ -72,10 +72,8 @@ const styles = StyleSheet.create({
     width: 250,
     color: '#FFF',
     textAlign: 'center',
-    fontFamily: 'Inter',
+    fontFamily: 'Satoshi-Bold',
     fontSize: 24,
-    fontStyle: 'normal',
-    fontWeight: 'bold',
   },
   textLight: {
     marginTop: 16,
@@ -84,10 +82,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    fontFamily: 'Satoshi',
+    fontFamily: 'Satoshi-Light',
     fontSize: 16,
-    fontStyle: 'normal',
-    fontWeight: '500',
   },
   colorPrimary: {
     color: '#E34A01',

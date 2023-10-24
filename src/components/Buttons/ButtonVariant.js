@@ -22,10 +22,8 @@ const styles = StyleSheet.create({
   text: {
     color: '#000',
     textAlign: 'center',
-    fontFamily: 'Mulish',
+    fontFamily: 'Satoshi-Bold',
     fontSize: 18,
-    fontStyle: 'normal',
-    fontWeight: '400',
   },
   buttonColor: {
     marginTop: 19,
