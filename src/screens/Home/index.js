@@ -1,15 +1,8 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-  Image,
-  Pressable,
-} from 'react-native';
+import { View, Text, StyleSheet, ImageBackground, Image, Pressable } from 'react-native';
 import React from 'react';
 import ButtonSecundary from '../../components/Buttons/ButtonSecundary';
 
-export default function Home({navigation}) {
+export default function Home({ navigation }) {
   const onPress = () => {
     navigation.navigate('Onboarding');
   };
@@ -20,16 +13,13 @@ export default function Home({navigation}) {
         source={require('../../assets/image/home.png')}
         resizeMode="cover"
         resizeMethod="resize"
-        style={styles.image}>
+        style={styles.image}
+      >
         <View style={styles.containersub}>
-          <Image
-            source={require('../../assets/image/logo.png')}
-            style={styles.icon}
-          />
+          <Image source={require('../../assets/image/logo.png')} style={styles.icon} />
           <Text style={styles.text}>Meet Our Expert Instructors</Text>
           <Text style={styles.textLight}>
-            Learn with fitness experts, at your own pace, and 100% updated
-            content.
+            Learn with fitness experts, at your own pace, and 100% updated content.
           </Text>
           <ButtonSecundary onPress={onPress} text={'Get started'} />
           <Text style={styles.textLight}>

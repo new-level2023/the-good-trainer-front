@@ -1,20 +1,18 @@
-import {View, Text, StyleSheet, Pressable, Image} from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
 import React from 'react';
 
-export default function ButtonVariant({onPress, text}) {
+export default function ButtonVariant({ onPress, text }) {
   return (
     <View style={styles.container}>
       <Pressable
-      onPress={onPress}
-      color={'#0000'}
-      style={styles.buttonColor}
-      colorScheme="primary"
-      variant="subtle">
-      <Text style={styles.text}>{text}</Text>
-      <Image
-        source={require('../../assets/image/Bitmap.png')}
-        style={styles.icon}
-      />
+        onPress={onPress}
+        color={'#0000'}
+        style={styles.buttonColor}
+        colorScheme="primary"
+        variant="subtle"
+      >
+        <Text style={styles.text}>{text}</Text>
+        <Image source={require('../../assets/image/Bitmap.png')} style={styles.icon} />
       </Pressable>
     </View>
   );
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingVertical: 16,
     borderRadius: 30,
-    width: "100%",
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'center',
   },

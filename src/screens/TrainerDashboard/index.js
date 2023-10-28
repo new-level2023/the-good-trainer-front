@@ -1,24 +1,23 @@
 /* eslint-disable react/no-unstable-nested-components */
-import {View, Text, Image} from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
-import Card from '../../components/Card/Card';
 
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Rutines from '../../Rutines';
 import Dashboard from '../Dashboard';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Champs from '../Champs';
-import {Avatar, Badge, Box, NativeBaseProvider} from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 import TopBar from '../../components/TopBar/TopBar';
 
 export default function TrainerDashboard() {
   const Tab = createBottomTabNavigator();
   return (
     <NativeBaseProvider>
-      <View style={{height: '100%', backgroundColor: '#ffff'}}>
+      <View style={{ height: '100%', backgroundColor: '#ffff' }}>
         <Tab.Navigator
           initialRouteName="Dashboard"
-          screenOptions={({route}) => ({
+          screenOptions={({ route }) => ({
             // headerShown: false,
             header: () => <TopBar />,
             tabBarStyle: {
@@ -30,7 +29,7 @@ export default function TrainerDashboard() {
               borderTopLeftRadius: 8,
               borderTopRightRadius: 8,
             },
-            tabBarIcon: ({color, size}) => {
+            tabBarIcon: ({ color, size }) => {
               let iconName;
 
               if (route.name === 'Dashboard') {
@@ -57,7 +56,8 @@ export default function TrainerDashboard() {
               fontWeight: '700',
               textAlign: 'center',
             },
-          })}>
+          })}
+        >
           <Tab.Screen name="Dashboard" component={Dashboard} />
           <Tab.Screen name="Rutines" component={Rutines} />
           <Tab.Screen name="Champs" component={Champs} />

@@ -1,23 +1,19 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 import ButtonVariant from '../../components/Buttons/ButtonVariant';
-//import ButtonGradient from '../../components/Buttons/ButtonGradient';
 
 export function Onboarding({ navigation }) {
-  const navigateTrainer = (e) => {
+  const navigateTrainer = () => {
     navigation.navigate('Trainer');
   };
-  const navigateChamp = (e) => {
+  const navigateChamp = () => {
     navigation.navigate('Trainer');
   };
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../../assets/image/logo.png')}
-        style={styles.icon}
-      />
+      <Image source={require('../../assets/image/logo.png')} style={styles.icon} />
       <Text style={styles.title}>Are you a trainer or champ ?</Text>
       <ButtonPrimary text={'Trainer'} onPress={navigateTrainer} />
       <ButtonVariant text={'Champ'} onPress={navigateChamp} />
