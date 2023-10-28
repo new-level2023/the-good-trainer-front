@@ -2,8 +2,15 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 import ButtonVariant from '../../components/Buttons/ButtonVariant';
+import ButtonGradient from '../../components/Buttons/ButtonGradient';
 
 export default function Onboarding({navigation}) {
+  const onPress = () => {
+    navigation.navigate('TrainerDashboard');
+  };
+
+export default function Onboarding({navigation}) {
+
   return (
     <View style={styles.container}>
       <Image
@@ -11,11 +18,11 @@ export default function Onboarding({navigation}) {
         style={styles.icon}
       />
       <Text style={styles.title}>Are you a trainer or champ ?</Text>
-      <ButtonPrimary
-        onPress={() => navigation.navigate('Trainer')}
-        text={'Trainer'}
-      />
-      <ButtonVariant text={'Champ'} />
+
+      <ButtonPrimary text={'Trainer'} />
+      <ButtonVariant text={'Champ'} onPress={onPress} />
+      {/* <ButtonGradient text={'Continue'} /> */}
+
     </View>
   );
 }
