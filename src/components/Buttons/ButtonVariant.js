@@ -3,7 +3,8 @@ import React from 'react';
 
 export default function ButtonVariant({onPress, text}) {
   return (
-    <Pressable
+    <View style={styles.container}>
+      <Pressable
       onPress={onPress}
       color={'#0000'}
       style={styles.buttonColor}
@@ -14,11 +15,16 @@ export default function ButtonVariant({onPress, text}) {
         source={require('../../assets/image/Bitmap.png')}
         style={styles.icon}
       />
-    </Pressable>
+      </Pressable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 43,
+    width: '100%',
+  },
   text: {
     color: '#000',
     textAlign: 'center',
@@ -33,8 +39,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingVertical: 16,
     borderRadius: 30,
-    width: 250,
-    justifyContent: 'center',
+    width: "100%",
     flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

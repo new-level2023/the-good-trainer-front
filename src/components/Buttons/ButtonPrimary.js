@@ -3,17 +3,23 @@ import React from 'react';
 
 export default function ButtonPrimary({onPress, text}) {
   return (
-    <Pressable
-      onPress={onPress}
-      color={'#fff'}
-      style={styles.buttonColor}
-      variant="subtle">
+    <View style={styles.container}>
+       <Pressable
+        onPress={onPress}
+        color={'#fff'}
+        style={styles.buttonColor}
+        variant="subtle">
       <Text style={styles.text}>{text}</Text>
     </Pressable>
+   </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 43,
+    width: "100%",
+  },
   text: {
     color: '#fff',
     textAlign: 'center',
@@ -26,6 +32,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
     paddingVertical: 16,
     borderRadius: 30,
-    width: 250,
   },
 });

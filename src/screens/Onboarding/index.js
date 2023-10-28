@@ -9,6 +9,8 @@ export default function Onboarding({navigation}) {
     navigation.navigate('TrainerDashboard');
   };
 
+export default function Onboarding({navigation}) {
+
   return (
     <View style={styles.container}>
       <Image
@@ -16,9 +18,11 @@ export default function Onboarding({navigation}) {
         style={styles.icon}
       />
       <Text style={styles.title}>Are you a trainer or champ ?</Text>
+
       <ButtonPrimary text={'Trainer'} />
       <ButtonVariant text={'Champ'} onPress={onPress} />
       {/* <ButtonGradient text={'Continue'} /> */}
+
     </View>
   );
 }

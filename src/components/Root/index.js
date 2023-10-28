@@ -15,8 +15,16 @@ import {NavigationContainer} from '@react-navigation/native';
 import Signin from '../../screens/Signin';
 import Home from '../../screens/Home';
 import Onboarding from '../../screens/Onboarding';
+
+import Trainer from '../../screens/Trainer';
+
+
+// import RNCitizenPrinterModule from '../../printers.js/RNCitizenPrinterModule';
+// import RNBrotherPrinterModule from '../../printers.js/RNBrotherPrinterModule';
+
 import LogIn from '../../screens/LogIn';
 import TrainerDashboard from '../../screens/TrainerDashboard';
+
 
 const Root = () => {
   const Stack = createStackNavigator();
@@ -31,8 +39,12 @@ const Root = () => {
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
+
+        <Stack.Screen name="Trainer" component={Trainer} />
+
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="TrainerDashboard" component={TrainerDashboard} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
