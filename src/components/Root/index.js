@@ -8,8 +8,8 @@
 // import 'react-native-gesture-handler';
 import React from 'react';
 
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 // import {connect} from 'react-redux';
 import Signin from '../../screens/Signin';
@@ -19,8 +19,7 @@ import Trainer from '../../screens/Trainer';
 // import RNBrotherPrinterModule from '../../printers.js/RNBrotherPrinterModule';
 import LogIn from '../../screens/LogIn';
 import TrainerDashboard from '../../screens/TrainerDashboard';
-import { Onboarding } from '../../screens/Onboarding'
-
+import { Onboarding } from '../../screens/Onboarding';
 
 const Root = () => {
   const Stack = createStackNavigator();
@@ -31,14 +30,14 @@ const Root = () => {
         initialRouteName="Home"
         screenOptions={{
           headerShown: false,
-        }}>
+        }}
+      >
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="Trainer" component={Trainer} />
         <Stack.Screen name="LogIn" component={LogIn} />
         <Stack.Screen name="TrainerDashboard" component={TrainerDashboard} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );

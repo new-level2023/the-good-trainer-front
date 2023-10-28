@@ -1,19 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import ButtonVariant from '../../components/Buttons/ButtonVariant';
-import CustomInput from '../../components/NativeBase/CustomInput/CustomInput'
-import { Image, TextInput   } from 'react-native'
-import { NativeBaseProvider, Item,Input, Label } from 'native-base'
-import ButtonPrimary from '../../components/Buttons/ButtonPrimary'
+import CustomInput from '../../components/NativeBase/CustomInput/CustomInput';
+import { Image } from 'react-native';
+import ButtonPrimary from '../../components/Buttons/ButtonPrimary';
 
 const Trainer = () => {
   return (
-  
-           <View style={styles.container}>
-      <Image
-        source={require('../../assets/image/logo.png')}
-        style={styles.icon}
-      />
+    <View style={styles.container}>
+      <Image source={require('../../assets/image/logo.png')} style={styles.icon} />
       <Text style={styles.title}>Sign Up</Text>
       <View style={styles.inputView}>
         <CustomInput
@@ -31,9 +25,8 @@ const Trainer = () => {
       </View>
       <ButtonPrimary text="Sign Up" />
     </View>
-
-  )
-}
+  );
+};
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -67,7 +60,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     height: 56,
   },
+});
 
-})
-
-export default Trainer
+export default Trainer;

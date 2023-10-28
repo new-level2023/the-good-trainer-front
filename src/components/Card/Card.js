@@ -1,16 +1,8 @@
-/* eslint-disable react-native/no-inline-styles */
-import {View, Text} from 'react-native';
+import { Text } from 'react-native';
 import React from 'react';
-import {
-  NativeBaseProvider,
-  Box,
-  Heading,
-  Stack,
-  AspectRatio,
-  Image,
-} from 'native-base';
+import { NativeBaseProvider, Box, Heading, Stack, AspectRatio, Image } from 'native-base';
 
-export default function Card({item}) {
+export default function Card({ item }) {
   return (
     <NativeBaseProvider>
       <Box alignItems="center">
@@ -22,7 +14,8 @@ export default function Card({item}) {
           borderWidth="1"
           _light={{
             backgroundColor: 'gray.50',
-          }}>
+          }}
+        >
           <Box>
             <AspectRatio w="100%" ratio={16 / 7}>
               <Image
@@ -36,11 +29,11 @@ export default function Card({item}) {
           <Stack p="4" space={3}>
             <Stack space={2}>
               <Text>The Silicon Valley of India.</Text>
-              <Heading size="md" ml="-1" style={{fontFamily: 'Satoshi-Bold'}}>
+              <Heading size="md" ml="-1" style={{ fontFamily: 'Satoshi-Bold' }}>
                 {item.item.rutineName}
               </Heading>
             </Stack>
-            <Text fontWeight="400" style={{fontFamily: 'Satoshi-Medium'}}>
+            <Text fontWeight="400" style={{ fontFamily: 'Satoshi-Medium' }}>
               {item.item.rutineDescription}
             </Text>
           </Stack>

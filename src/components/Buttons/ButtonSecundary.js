@@ -1,26 +1,26 @@
-import {View, Text, StyleSheet, Pressable} from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
 import React from 'react';
-import {Button} from 'native-base';
 
-export default function ButtonSecundary({onPress, text}) {
+export default function ButtonSecundary({ onPress, text }) {
   return (
     <View style={styles.text}>
-       <Pressable
-          onPress={onPress}
-          color={'#0000'}
-          style={styles.buttonColor}
-          colorScheme="primary"
-          variant="subtle">
-      <Text style={styles.text}>{text}</Text>
-    </Pressable>
-   </View>
+      <Pressable
+        onPress={onPress}
+        color={'#0000'}
+        style={styles.buttonColor}
+        colorScheme="primary"
+        variant="subtle"
+      >
+        <Text style={styles.text}>{text}</Text>
+      </Pressable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 43,
-    width: "100%",
+    width: '100%',
   },
   text: {
     color: '#000',
