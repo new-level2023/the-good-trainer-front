@@ -2,13 +2,15 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import ButtonVariant from '../../components/Buttons/ButtonVariant';
 import CustomInput from '../../components/NativeBase/CustomInput/CustomInput'
-import { Image } from 'react-native'
-import { Center } from 'native-base'
+import { Image, TextInput   } from 'react-native'
+import { NativeBaseProvider, Item,Input, Label } from 'native-base'
+import ButtonPrimary from '../../components/Buttons/ButtonPrimary'
 
 const Trainer = () => {
   return (
-     <View style={styles.container}>
-      {/* <Image
+  
+           <View style={styles.container}>
+      <Image
         source={require('../../assets/image/logo.png')}
         style={styles.icon}
       />
@@ -16,21 +18,22 @@ const Trainer = () => {
       <View style={styles.inputView}>
         <CustomInput
           placeholder="Email"
-          label="Email"
-          size="2xl"
-      />
-      </View>
-       <View style={styles.inputView}>
-        <CustomInput
-          placeholder="Email"
-          label="Email"
-          size="2xl"
+          type="default"
+          onChangeText={(text) => console.log(text)}
         />
-      </View> */}
+      </View>
+      <View style={styles.inputView}>
+        <CustomInput
+          placeholder="Password"
+          type="default"
+          onChangeText={(text) => console.log(text)}
+        />
+      </View>
+      <ButtonPrimary text="Sign Up" />
     </View>
-  );
-}
 
+  )
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 30,
     marginBottom: 20,
-    height: 70,
+    height: 56,
   },
 
 })

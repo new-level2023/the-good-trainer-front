@@ -1,33 +1,45 @@
+import { Input, Label, NativeBaseProvider, View } from 'native-base'
 import React from 'react';
-import { Input, NativeBaseProvider, extendTheme } from 'native-base';
+import { TextInput, StyleSheet } from 'react-native';
 
-const theme = extendTheme({
-  components: {
-    Input: {
-      baseStyle: {
-        borderColor: '#000',
-        height: '70px',
-        borderRadius: '10px',
-        marginBottom: '200px',
-        width: '90%',
-        fontSize: 24
-      },
-    },
-  },
-});
 
-export default function CustomInput(props) {
-  return (  
-    <NativeBaseProvider theme={theme}>
-      <Input
+export const CustomInput = (props) => {
+  return (
+    <NativeBaseProvider>
+      <View style={styles.container}>
+       <Input
         placeholder={props.placeholder}
         onChangeText={props.onChangeText}
         value={props.value}
-        style={props.style}
-        type={props.type}
-        InputLeftElement={props.InputLeftElement}
-        InputRightElement={props.InputRightElement}
-      />
+        style={[styles.input, props.inputStyle]}
+        keyboardType={props.type}
+        />
+      </View>
+      {props.InputRightElement}
     </NativeBaseProvider>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderColor: '#000',
+    borderWidth: 2,
+    borderRadius: 10,
+    height: 56,
+    marginBottom: 10,
+    borderRadius: 10,
+    marginHorizontal: 43,
+
+  },
+  inputStyle: {
+    flex: 1,
+    borderWidth: 2,
+    fontSize: 16,
+    borderColor: "#000",
+    width: "100%",
+  },
+});
+
+export default CustomInput;

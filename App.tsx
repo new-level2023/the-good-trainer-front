@@ -18,7 +18,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 // import {PersistGate} from 'redux-persist/integration/react';
 // import {store, persistor} from './src/store/store';
 import Root from './src/components/Root';
-import { NativeBaseProvider, extendTheme } from 'native-base';
+import { NativeBaseProvider } from 'native-base';
 // import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 // import {toastConfig} from './src/components/Toast';
 
@@ -37,22 +37,10 @@ function App(): JSX.Element {
     SplashScreen.hide();
   }, []);
 
-    const newColorTheme = {
-    brand: {
-      900: '#5B8DF6',
-      800: '#ffffff',
-      700: '#cccccc',
-    },
-  };
-
-const theme = extendTheme({
-  colors: newColorTheme,
-});
-
 
   return (
-    <NativeBaseProvider theme={theme}>
-      <SafeAreaProvider style={{backgroundColor: '#000'}}>
+    // <NativeBaseProvider>
+    <SafeAreaProvider style={{backgroundColor: '#000'}}>
       {/* <QueryClientProvider client={queryClient}> */}
 
       {/* <Provider>
@@ -62,8 +50,10 @@ const theme = extendTheme({
         </Provider> */}
       {/* </QueryClientProvider> */}
       {/* <Toast config={toastConfig} /> */}
-      </SafeAreaProvider>
-    </NativeBaseProvider>
+    </SafeAreaProvider>
+    // </NativeBaseProvider>
+    
+    
   );
 }
 
